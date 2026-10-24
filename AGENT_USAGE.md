@@ -5,7 +5,7 @@ Edit `agent_config.json` in the repository root before running either entry poin
 
 ```json
 {
-  "dataset_root": "E:/LabWork/spatial_data/dataset"
+  "dataset_root": "E:/SpatialOmni_Dataset"
 }
 ```
 
