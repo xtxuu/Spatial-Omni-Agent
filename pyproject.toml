@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatial-omics-loader"
+version = "0.1.0"
+description = "Metadata-first access to portable spatial counts and image releases"
+requires-python = ">=3.10"
+dependencies = ["anndata>=0.10,<0.12", "h5py>=3.8", "numpy>=1.24", "pandas>=2.0", "scipy>=1.10", "duckdb>=1.1,<2", "Pillow>=9", "tqdm>=4.65"]
+
+[project.optional-dependencies]
+agent = ["google-genai>=1.75,<2"]
+analysis = ["pydeseq2>=0.5.2,<0.6", "matplotlib>=3.8", "formulaic>=1.1", "threadpoolctl>=3"]
+
+[tool.setuptools.packages.find]
+include = ["spatial_loader*", "spatial_data_agent*", "spatial_analysis_agent*"]
